@@ -1,13 +1,17 @@
 import { Navbar } from 'flowbite-react'
 import React from 'react'
 import logo from '../img/logo.jpg'
+import {Link} from 'react-router-dom'
+
+// import { NavbarLink } from 'flowbite-react/lib/esm/components/Navbar/NavbarLink'
+// import { Navbar } from 'flowbite-react'
 
 export default function Header() {
   return (
     <header className='border border-gray fixed w-full shadow-lg z-40'>
     <Navbar className='bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800'
     >
-        <Navbar.Brand href="https://flowbite.com/">
+        <Navbar.Brand href="https://flowbite.com/"> 
             <img
             src={logo}
             className="mr-3 h-6 sm:h-9"
@@ -24,13 +28,17 @@ export default function Header() {
             <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-            <Navbar.Link
-            href="/navbars"
-            active={true}
+            {/* <Navbar.Link
+            href="/"
+            active={false}
             >
             Home
-            </Navbar.Link>
-            <Navbar.Link href="/navbars">
+            </Navbar.Link> */}
+            <Link to="/">Main</Link>
+            <Link to="/about">Bout</Link>
+            <Navbar.Link 
+            href="/about"
+            active={true}>
             About
             </Navbar.Link>
             <Navbar.Link href="/navbars">
