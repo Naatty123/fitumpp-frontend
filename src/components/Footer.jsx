@@ -42,28 +42,24 @@ export default function Footer() {
       {/* Content Lists */}
       <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         {Fbuttons.map((item) => (
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 
-          key={item.id}
+          <div 
+          className="lg:w-1/4 md:w-1/2 w-full px-4"
+          key={item.id}>
+          <h2         
           className="title-font font-medium text-gray-900 tracking-widest text-lg mb-2">{item.title}</h2>
           <hr className='border-primary-500  w-2/4 m-auto mb-3 lg:m-0 lg:mb-3'/>
           <nav className="list-none mb-10 space-y-1">
             {/* {llinks =item.links.length} */}
             {item.links.map((sitem) =>(
-                <li>
-                <a 
-                key={sitem}
-                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">{sitem}</a>
+                <li
+                key={sitem}>
+                <a className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">{sitem}</a>
               </li> 
             ))}
            
           </nav>
         </div>
         ))}
-        
-       
-        
-        
       </div>
     </div>
 
