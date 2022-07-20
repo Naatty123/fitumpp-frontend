@@ -6,6 +6,7 @@ import MenuProvider from "react-flexible-sliding-menu";
 import Menu from './components/Menu'
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

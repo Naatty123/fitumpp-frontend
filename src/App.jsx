@@ -13,15 +13,15 @@ export default function App() {
   return (
     <Router>
     <Header/>
-        <main className='min-h-screen'>
-        <Routes>
-          <Route path='/' element={ <Home/> }/>
-          <Route path='/about' element={ <About/>} />
-          <Route path='/contact' element={ <Contact/>} />
-          <Route path='/product' element={ <Products/>} />
-          <Route path='/blog' element={ <Blog/>} />
-          <Route path='/testi' element={ <Testi/>} />
-        </Routes>
+        <main className='min-h-screen pt-10 md:pt-20 '>
+          <Routes>
+            <Route path='/' element={ <Home/> }/>
+            <Route path='/about' element={ <About/>} />
+            <Route path='/contact' element={ <Contact/>} />
+            <Route path='/product' element={ <Products/>} />
+            <Route path='/blog' element={ <Blog/>} />
+            <Route path='/testi' element={ <Testi/>} />
+          </Routes>
         </main>
     <Footer/>
    </Router>

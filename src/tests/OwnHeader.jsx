@@ -1,9 +1,8 @@
 import React from 'react'
 import { Fragment } from 'react'
 import { Popover,Transition } from '@headlessui/react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import logo from '../img/Logos/Fitsum letter F only logo.png'
-import clogo from '../assets/images/logo/F Only Colored Logo.png'
 import { 
     MenuIcon,
     HomeIcon,
@@ -14,7 +13,6 @@ import {
     XIcon
 } from '@heroicons/react/outline'
 import Home from '../pages/Home'
-import ListItems from '../utils/ListItems'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -25,7 +23,7 @@ const mobileMenuItems = [
         name: 'Home',
         to: '/',
         icon: HomeIcon,
-    }, 
+    },
     {
         name: 'Products',
         to: '/products',
@@ -52,39 +50,60 @@ const mobileMenuItems = [
 export default function OwnHeader() {
   return (
     // Whole Menu
-   <Popover className="fixed w-full shadow-xl bg-primary-500 border border-gray-300 z-40">
+   <Popover className="relative bg-primary-500 border border-gray-300">
     <div className='max-w-7xl mx-auto px-4 sm:px-6'>
-        <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x'>
+        <div className='flex justify-start items-center border-b-2 border-gray-100 py-2 md:justify-start md:space-x-10'>
             {/* Fitsum Advert Logo */}
-            <div className='flex  justify-start  lg:w-auto lg:flex-none'>
+            <div className='flex justify-start lg:w-0 lg:flex-1'>
                 <Link to="/">
                     <span className='sr-only'>Fitsum Advert</span>
                     <img 
                     src={logo} 
                     alt="Fitsum Advert Logo" 
-                    className='h-10 w-auto sm:h-[70px]'
+                    className='h-10 w-auto sm:h-16'
                     />
                 </Link>
             </div>
-           
-            {/* Webview Headers */}
-            <div className='w-auto lg:flex-none px-5 py-2'>
-            <Popover.Group as="nav" className="hidden md:flex items-end h-full space-x-5">
-                <ListItems link="/" name="Home" />
-                <ListItems link="/produt" name="Products" />
-                <ListItems link="/blog" name="Blog"  />
-                <ListItems link="/about" name="About Us"  />
-                <ListItems link="/contact" name="Contact Us"  />
-            </Popover.Group>
-            </div>
-
-             {/* Hambug Menu For Phone */}
-             <div className='-mr-2 -my-2 md:hidden'>
+            {/* Hambug Menu For Phone */}
+            <div className='-mr-2 -my-2 md:hidden'>
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className='sr-only'>Open Menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true"/>
                 </Popover.Button>
             </div>
+            {/* Webview Headers */}
+            <Popover.Group as="nav" className="hidden md:flex space-x-10">
+                <Link to="/" className='text-base font-medium text-gray-50 hover:text-gray-900'>
+                <div className='flex justify-end gap-1 items-end'>
+                    <HomeIcon className='w-8'/>
+                    <span>Home</span>
+                </div>
+                </Link>
+                <Link to="/products" className='text-base font-medium text-gray-50 hover:text-gray-900'>
+                    <div className='flex justify-end gap-1 items-end'>
+                        <ShoppingCartIcon className='w-8'/>
+                        <span>Products</span>
+                </div>
+                </Link>
+                <Link to="/blog" className='text-base font-medium text-gray-50 hover:text-gray-900'>
+                    <div className='flex justify-end gap-1 items-end'>
+                        <NewspaperIcon className='w-8'/>
+                        <span>Blog</span>
+                </div>
+                </Link>
+                <Link to="/about" className='text-base font-medium text-gray-50 hover:text-gray-900'>
+                    <div className='flex justify-end gap-1 items-end'>
+                        <UserGroupIcon className='w-8'/>
+                        <span>About Us</span>
+                </div>
+                </Link>
+                <Link to="/contact" className='text-base font-medium text-gray-50 hover:text-gray-900'>
+                    <div className='flex justify-end gap-1 items-end'>
+                        <IdentificationIcon className='w-8'/>
+                        <span>Contact Us</span>
+                </div>
+                </Link>
+            </Popover.Group>
         </div>
     </div>
     {/* Mobile Context Menu */}
@@ -99,15 +118,15 @@ export default function OwnHeader() {
       >
         {/* Mobile Pop Up Menu */}
         <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div className='rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 bg-gray-50 divide-y-2 divide-gray-50 '>
+            <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-primary-500 divide-y-2 divide-gray-50'>
                 <div className='pt-5 pb-6 px-5'>
                     <div className='flex items-center justify-between'>
                         {/* Fitsum Advert Logo */}
                         <div>
                             <img 
-                            src={clogo} 
+                            src={logo} 
                             alt="Fitsum Advert Logo" 
-                            className='h-12 w-auto sm:h-16 '
+                            className='h-8 w-auto sm:h-16'
                             />
                         </div>
                         {/* Close Button */}
@@ -127,9 +146,8 @@ export default function OwnHeader() {
                                     to={item.to}
                                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 border-b border-gray-50"
                                 >
-                                    <item.icon className='flex-shrink-0 h-6 w-6 text-primary-500' aria-hidden="true" />
-                                    <span className='ml-3 text-base font-medium text-primary-500'>{item.name}</span>
-                                <br className='border border-primary-400 text-primary-500 bg-primary-500' />
+                                    <item.icon className='flex-shrink-0 h-6 w-6 text-gray-50' aria-hidden="true" />
+                                    <span className='ml-3 text-base font-medium text-gray-50'>{item.name}</span>
                                 </Link>
                             ))}
                         </nav>
