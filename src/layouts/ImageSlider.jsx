@@ -11,15 +11,15 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
 // Import Section 1 Images
-import bussinessCard from '../assets/images/Section1Slider/1.webp'
-import corporateBrouchers from '../assets/images/Section1Slider/2.webp'
-import cakeTopperes from '../assets/images/Section1Slider/3.jpg'
-import p6LEDs from '../assets/images/Section1Slider/4.jpg'
-import carBrandings from '../assets/images/Section1Slider/5.jpg'
-import calanders from '../assets/images/Section1Slider/6.png'
-import Dfoam from '../assets/images/Section1Slider/7.jpg'
-import signange from '../assets/images/Section1Slider/8.jpg'
-import tea from '../assets/images/Section1Slider/9.jpg'
+import bussinessCard from '../assets/images/Section-Slider/1.webp'
+import corporateBrouchers from '../assets/images/Section-Slider/2.webp'
+import cakeTopperes from '../assets/images/Section-Slider/3.jpg'
+import p6LEDs from '../assets/images/Section-Slider/4.jpg'
+import carBrandings from '../assets/images/Section-Slider/5.jpg'
+import calanders from '../assets/images/Section-Slider/6.png'
+import Dfoam from '../assets/images/Section-Slider/7.jpg'
+import signange from '../assets/images/Section-Slider/8.jpg'
+import tea from '../assets/images/Section-Slider/9.jpg'
 
 
 export default function ImageSlider(props) {

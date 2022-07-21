@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Footer from './layouts/Footer'
+import Header from './layouts/Header'
 import Home from './pages/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import About from './pages/About'
