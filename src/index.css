@@ -15,4 +15,10 @@
     .socialIcons{
         @apply text-gray-500 cursor-pointer hover:text-primary-500;
     }
+    .sectionOneBoxOff{
+        @apply w-10 h-2 bg-gray-400;
+    }
+    .sectionOneBoxOn{
+        @apply w-10 h-2 bg-primary-500;
+    }
 }

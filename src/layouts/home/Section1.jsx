@@ -16,16 +16,16 @@ import signange from '../../assets/images/Section-Slider/8.jpg'
 import tea from '../../assets/images/Section-Slider/9.jpg'
 
 const works =[
-    {id: 1, name: "Bussiness Cards", image: bussinessCard, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 2, name: "Corporate Brochures", image:corporateBrouchers, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 3, name: "Cake Toopers", image: cakeTopperes, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 4, name: "P6 LED displays", image: p6LEDs, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 5, name: "Car Brandings", image: carBrandings, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 6, name: "Calendars", image: calanders, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 7, name: "3D Foam Cutout Branding", image: Dfoam, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 8, name: "Signage", image: signange, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 9, name: "Tea", image: tea},
-  ]
+  {id: 1, name: "Bussiness Cards", image: bussinessCard, cname: 'sectionOneBoxOff'},
+  {id: 2, name: "Corporate Brochures", image:corporateBrouchers, cname: 'sectionOneBoxOff'},
+  {id: 3, name: "Cake Toopers", image: cakeTopperes, cname: 'sectionOneBoxOff'},
+  {id: 4, name: "P6 LED displays", image: p6LEDs, cname: 'sectionOneBoxOff'},
+  {id: 5, name: "Car Brandings", image: carBrandings, cname: 'sectionOneBoxOff'},
+  {id: 6, name: "Calendars", image: calanders, cname: 'sectionOneBoxOff'},
+  {id: 7, name: "3D Foam Cutout Branding", image: Dfoam, cname: 'sectionOneBoxOff'},
+  {id: 8, name: "Signage", image: signange, cname: 'sectionOneBoxOff'},
+  {id: 9, name: "Tea", image: tea},
+]
 
   function checkName(id){
     switch(id){
@@ -61,6 +61,12 @@ const works =[
     }
   }
 
+  function checkCurrent(item){
+    if(item.id == nid){
+
+    }
+
+  }
 export default function SectionOne() {
   let [nid, setNid] = useState(1);
     return (
@@ -75,17 +81,18 @@ export default function SectionOne() {
                         <br className="hidden lg:inline-block"/>
                          with quality
           </h1>
-          <div className='w-full md:w-1/2 flex gap-5'>
-              {
+              <ImageCounter work={works} current={nid}/>
+              {/* {
                 works.map((item) => (
+                  
                   <ImageCounter 
                   key={item.id}
                   cname={item.cname}
                   nowNum={nid}
                   />
                 ))
-              }
-          </div>
+              } */}
+          
       </div>
         <SectionOneSlider countt={setNid}/>
     </div>

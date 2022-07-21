@@ -21,14 +21,14 @@ import signange from '../../../assets/images/Section-Slider/8.jpg'
 import tea from '../../../assets/images/Section-Slider/9.jpg'
 
 const works =[
-    {id: 1, name: "Bussiness Cards", image: bussinessCard, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 2, name: "Corporate Brochures", image:corporateBrouchers, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 3, name: "Cake Toopers", image: cakeTopperes, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 4, name: "P6 LED displays", image: p6LEDs, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 5, name: "Car Brandings", image: carBrandings, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 6, name: "Calendars", image: calanders, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 7, name: "3D Foam Cutout Branding", image: Dfoam, cname: 'w-10 h-2 bg-gray-400'},
-    {id: 8, name: "Signage", image: signange, cname: 'w-10 h-2 bg-gray-400'},
+    {id: 1, name: "Bussiness Cards", image: bussinessCard, cname: 'sectionOneBoxOff'},
+    {id: 2, name: "Corporate Brochures", image:corporateBrouchers, cname: 'sectionOneBoxOff'},
+    {id: 3, name: "Cake Toopers", image: cakeTopperes, cname: 'sectionOneBoxOff'},
+    {id: 4, name: "P6 LED displays", image: p6LEDs, cname: 'sectionOneBoxOff'},
+    {id: 5, name: "Car Brandings", image: carBrandings, cname: 'sectionOneBoxOff'},
+    {id: 6, name: "Calendars", image: calanders, cname: 'sectionOneBoxOff'},
+    {id: 7, name: "3D Foam Cutout Branding", image: Dfoam, cname: 'sectionOneBoxOff'},
+    {id: 8, name: "Signage", image: signange, cname: 'sectionOneBoxOff'},
     {id: 9, name: "Tea", image: tea},
   ]
 
@@ -49,7 +49,6 @@ export default function SectionOneSlider(props) {
         else 
           count++
         props.countt(count)    
-        console.log(count)
       }}
       className="mySwiper h-screen">
       {
@@ -63,7 +62,4 @@ export default function SectionOneSlider(props) {
       }
     </Swiper>
     )
-
-  
-  
 }
