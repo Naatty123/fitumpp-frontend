@@ -20,7 +20,6 @@ function checkIcon(name){
       case "Contact Us":
         return (<IdentificationIcon className={checkWidth}/>)
       break; 
-
     default:
       break;
   }

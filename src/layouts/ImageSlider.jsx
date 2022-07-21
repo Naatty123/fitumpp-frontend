@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import Section1Hero from './Section1Hero';
+import Section1Hero from '../components/home/Section1/SectionOneHero';
 
 
 import 'swiper/css';

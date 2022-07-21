@@ -1,18 +1,8 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-// import SectionOneSlider from './SectionOneSlider'
-import ImageCounter from './ImageCounter'
-// import '../../data/works.json'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import Section1Hero from '../../layouts/Section1Hero.jsx';
 
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay';
+import ImageCounter from '../../components/home/Section1/ImageCounter'
+import SectionOneSlider from '../../components/home/Section1/SectionOneSlider';
 
 // Import Section 1 Images
 import bussinessCard from '../../assets/images/Section-Slider/1.webp'
@@ -40,7 +30,7 @@ const works =[
   function checkName(id){
     switch(id){
       case 1:
-        return 'Bussiness Cards';
+        return ' Bussiness Cards';
         break;
       case 2: 
         return 'Corporate Brouchers';
@@ -70,61 +60,10 @@ const works =[
         return ' NULL ';
     }
   }
-//   const fcount = (id) => {
-//     //   props.nfun(id)
-//     }
-  
- function SectionOneSlider(props) {
-    let count = 1;
-  
-    // function countWorks(){
-    //     //   fcount(count)
-    //       if(count == works.length){
-    //         count = 1}
-    //       else{
-    //         count++}
-    //         // console.log(count)
-    //         return count;
-    //     }
-    //     // useEffect(()=>{
-    //         props.change(countWorks())
-    //         console.log(countWorks())
-    //     // },[countWorks])
-    //     // {props.change(countWorks)}
-
-    return (
-    <Swiper 
-      pagination={true} 
-      modules={[Autoplay]} 
-      autoplay={{
-        delay: 2500
-      }}
-      onSlideChange={()=> {
-        count++
-        // console.log(count)
-        props.change(count)
-      }}
-    //   onSwiper={(swiper) => console.log(swiper)}
-      className="mySwiper h-screen">
-      {
-        works.map((item) =>(
-        <SwiperSlide
-        key={item.id}
-        > 
-          <Section1Hero image={item.image}/>
-        </SwiperSlide>
-        ))
-      }
-    </Swiper>
-    )
-  }
-  
 
 export default function SectionOne() {
-let [nid, setNid] = useState();
-
+  let [nid, setNid] = useState(1);
     return (
-    
     <div>
       <div className='flex  flex-col gap-8 absolute py-10 px-5 md:py-40 md:pl-32 md:w-full w-full z-30'>
         <h1 className="title-font sm:text-7xl text-4xl w-1/2 md:w-full mb-4 font-medium text-gray-900">Producing 
@@ -134,17 +73,21 @@ let [nid, setNid] = useState();
                     {checkName(nid)}  
                     </span> 
                         <br className="hidden lg:inline-block"/>
-                        with quality
+                         with quality
           </h1>
           <div className='w-full md:w-1/2 flex gap-5'>
               {
                 works.map((item) => (
-                  <ImageCounter cname={item.cname}/>
+                  <ImageCounter 
+                  key={item.id}
+                  cname={item.cname}
+                  nowNum={nid}
+                  />
                 ))
               }
           </div>
       </div>
-        <SectionOneSlider change={setNid}/>
+        <SectionOneSlider countt={setNid}/>
     </div>
   )
 }

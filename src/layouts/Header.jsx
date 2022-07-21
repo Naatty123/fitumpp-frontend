@@ -2,7 +2,7 @@ import React from 'react'
 import { Fragment } from 'react'
 import { Popover,Transition } from '@headlessui/react'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../img/Logos/Fitsum letter F only logo.png'
+import logo from '../assets/images/logo/Fitsum letter F only logo.png'
 import clogo from '../assets/images/logo/F Only Colored Logo.png'
 import { 
     MenuIcon,
@@ -14,12 +14,11 @@ import {
     XIcon
 } from '@heroicons/react/outline'
 import Home from '../pages/Home'
-import ListItems from '../utils/ListItems'
+import ListItems from '../components/ListItems'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
-
 const mobileMenuItems = [
     {
         name: 'Home',

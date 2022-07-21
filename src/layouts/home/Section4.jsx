@@ -42,7 +42,7 @@ function checkWidth(){
             window.removeEventListener('resize', handleWindowResize);
           };
     },[]);
-    console.log(workTiles);
+    // console.log(workTiles);
     // checkWidth();
     // console.log(checkWidth())
 
@@ -76,7 +76,9 @@ function checkWidth(){
                 >
                {
                 services.map((item)=>(
-                    <SwiperSlide>
+                    <SwiperSlide
+                    key={item.id}
+                    >
                         <WorksBox 
                         key={item.id}
                         title={item.title}/>

@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../img/Logos/Fitsum letter F only logo.png'
-import SocialIcons from '../utils/SocialIcons';
+import logo from '../assets/images/logo/Fitsum letter F only logo.png'
+import SocialIcons from '../components/SocialIcons';
 import clogo from '../assets/images/logo/F Only Colored Logo.png'
 
 const Fbuttons =[
