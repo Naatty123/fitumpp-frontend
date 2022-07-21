@@ -16,6 +16,7 @@ import logo10 from '../assets/images/Compnays/10.png'
 import logo11 from '../assets/images/Compnays/11.png'
 import logo12 from '../assets/images/Compnays/12.jpg'
 import CompanyCards from '../components/CompanyCards';
+import CompanyCardHolder from '../components/CompanyCardHolder';
 
 export default function Home() {
   
@@ -56,17 +57,17 @@ export default function Home() {
     {/* Fourth Content */}
     <FourthContent/>
     {/* Fifth Content */}
-    <div className='w-full min-h-screen py-10'>
+    <div className='w-full min-h-screen py-10 px-5'>
       {/* Behind the Scene Box */}
-      <div className='absolute w-[30%] h-80 bg-gray-300 mt-56'>
+      <div className='absolute w-[50%] md:w-[30%] h-80 bg-gray-300 mt-56'>
 
       </div>
       {/* Middle Box */}
-      <div className='my-20 relative w-[80%] h-80 m-auto bg-primary-500'>
+      <div className='my-20 relative w-full md:w-[80%] h-80 m-auto bg-primary-500'>
 
       </div>
       {/* Text Box */}
-      <div className='absolute -mt-52 mx-20 w-[30%] h-52 px-10 py-5 space-y-5 bg-gray-50 shadow-xl'>
+      <div className='absolute -mt-52  md:mx-20 w-[80%] mx-5 md:w-[30%] h-52 px-10 py-5 space-y-5 bg-gray-50 shadow-xl'>
         <h1 className='text-4xl '>See The Works Done</h1>
         <p className='flex items-center text-xl gap-5'>View Gallery <ArrowRightIcon className="w-5"/></p>
       </div>
@@ -88,53 +89,101 @@ export default function Home() {
       </div>
       {/* Foreground Data */}
       <div className='w-full h-96 bg-transparent z-20 flex flex-row gap-20 justify-evenly items-center'>
-        <div className='w-48 h-52 bg-gray-400 shadow-xl'></div>
-        <div className='w-48 h-52 bg-gray-400 shadow-xl'></div>
-        <div className='w-48 h-52 bg-gray-400 shadow-xl'></div>
-        <div className='w-48 h-52 bg-gray-400 shadow-xl'></div>
-        <div className='w-48 h-52 bg-gray-400 shadow-xl'></div>
+        <div className='w-[80%] h-96 md:w-48 md:h-52 bg-gray-300 shadow-xl'></div>
+        <div className='hidden md:block w-48 h-52 bg-gray-400 shadow-xl'></div>
+        <div className='hidden md:block w-48 h-52 bg-gray-400 shadow-xl'></div>
+        <div className='hidden md:block w-48 h-52 bg-gray-400 shadow-xl'></div>
+        <div className='hidden md:block w-48 h-52 bg-gray-400 shadow-xl'></div>
       </div>
     </div>
     {/* Seventh Content */}
     <div className='w-full relative h-auto  bg-[#E4F8F2] flex flex-col items-center py-5'>
       <div className='flex flex-col gap-5'>
-        <h1 className='text-5xl'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
+        <h1 className='text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
         <hr className='border-2 border-primary-500 bg-primary-500 w-1/4 m-auto rounded-full'/>
       </div>
       {/* Company List */}
-      <div className='w-full h-auto  grid grid-cols-7 gap-5'>
-        <div className='w-full h-full '></div>
-        <div className='w-full h-full  flex flex-col py-60'>
-        <CompanyCards/>
+      <div className='w-full h-auto  grid grid-cols-1 md:grid-cols-7 gap-10'>
+        <CompanyCardHolder />
+        <div className='w-full h-full  flex flex-col md:py-56'>
+        <CompanyCards image={logo8}/>
+        </div>
+
+        <div className='w-full h-full  flex flex-col gap-12 md:py-36'>
+           <CompanyCards image={logo4}/>
+           <CompanyCards image={logo5}/>
+        </div>
+
+        <div className='w-full h-full  flex flex-col gap-12 md:py-12'>
+           <CompanyCards image={logo1}/>
+           <CompanyCards image={logo2}/>
+           <CompanyCards image={logo3}/>
         </div>
         
-        <div className='w-full h-full  flex flex-col gap-12 py-40'>
-           <CompanyCards/>
-           <CompanyCards/>
+        <div className='w-full h-full  flex flex-col gap-12 md:py-36'>
+           <CompanyCards image={logo6}/>
+           <CompanyCards image={logo7}/>
         </div>
 
-        <div className='w-full h-full  flex flex-col gap-12 py-20'>
-           <CompanyCards/>
-           <CompanyCards/>
-           <CompanyCards/>
+        <div className='w-full h-full  flex flex-col md:py-56'>
+           <CompanyCards image={logo10}/>
         </div>
+        <CompanyCardHolder />
         
-        <div className='w-full h-full  flex flex-col gap-12 py-40'>
-           <CompanyCards/>
-           <CompanyCards/>
-        </div>
-
-        <div className='w-full h-full  flex flex-col py-60'>
-           <CompanyCards/>
-        </div>
-        <div className='w-full h-full '></div>
-
-
       </div>
 
     </div>
-
-
+    {/* Eigth Content */}
+    <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+    </div>
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M8 17l4 4 4-4m-4-5v9"></path>
+            <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+          <p class="leading-relaxed">Downloads</p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2>
+          <p class="leading-relaxed">Users</p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+            <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900">74</h2>
+          <p class="leading-relaxed">Files</p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
+          <p class="leading-relaxed">Places</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function CompanyCardHolder() {
   return (
-    <div>
-      
-    </div>
+    <div className='w-full h-full '></div>
   )
 }

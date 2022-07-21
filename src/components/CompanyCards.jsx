@@ -1,10 +1,9 @@
 import React from 'react'
-import logo1 from '../assets/images/Compnays/1.png'
 
-export default function CompanyCards() {
+export default function CompanyCards(props) {
   return (
-    <div className='rounded-xl overflow-hidden border border-gray-200 shadow-lg'>
-              <img src={logo1} alt="First Company Logo" />
+    <div className='rounded-xl overflow-hidden border border-gray-200 bg-white flex justify-center items-center shadow-lg'>
+              <img className='h-28 w-auto' src={props.image} alt="First Company Logo" />
     </div>
   )
 }
