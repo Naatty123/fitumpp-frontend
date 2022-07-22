@@ -28,7 +28,7 @@ export default function Footer() {
   let tdate = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-300 text-gray-600 body-font absolute w-full border border-gray z-30">
+    <footer className="absolute bg-gray-300 text-gray-600 body-font w-full border border-gray z-30">
       {/* Top Footer Part */}
     <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap lg:gap-32 flex-wrap flex-col">
       {/* Fitsum Advert Logo */}
