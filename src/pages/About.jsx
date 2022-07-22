@@ -1,9 +1,13 @@
 import React from 'react'
 
+import fullLogo from '../assets/images/logo'
+
 export default function About() {
   return (
-    <div className=' bg-red-400'>
-        <h1>hELLO</h1>
-    </div>
+   <div className='min-h-screen boor flex flex-col'>
+      <div>
+        <img src="" alt="" />
+      </div>
+   </div>
   )
 }

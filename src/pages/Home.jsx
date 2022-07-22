@@ -9,6 +9,7 @@ import Section5 from '../layouts/home/Section5';
 import Section6 from '../layouts/home/Section6';
 import Section7 from '../layouts/home/Section7';
 import Section8 from '../layouts/home/Section8';
+import Section9 from '../layouts/home/Section9';
 
 export default function Home() {
   
@@ -18,18 +19,21 @@ export default function Home() {
       <Section1/>
     {/* Section Two */}
       <Section2/>
-    {/* Third Content */}
+    {/* Section Three */}
       <Section3/>
-    {/* Fourth Content */}
+    {/* Section Four */}
       <Section4/>
-    {/* Fifth Content */}
+    {/* Section Five */}
       <Section5/>
-    {/* Sixth Content */}
+    {/* Section Six */}
       <Section6/>
-    {/* Seventh Content */}
+    {/* Section Seven */}
       <Section7/>
-    {/* Eigth Content */}
+    {/* Section Eight */}
       <Section8/>
+    {/* Section Nine */}
+      <Section9/>
+
     </div>
   )
 }
