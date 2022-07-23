@@ -20,6 +20,7 @@ export default function About() {
         <Section4/>
       {/* Section Five */}
         <Section5/>
+      {/* Section Six */}
 
     </div>
   )

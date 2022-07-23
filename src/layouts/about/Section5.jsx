@@ -1,16 +1,18 @@
-import { UserGroupIcon } from '@heroicons/react/outline'
+import { CogIcon, UserGroupIcon } from '@heroicons/react/outline'
 import React from 'react'
+
+import role from '../../assets/images/AboutPageIcons/role.jpg'
 
 export default function Section5() {
   return (
     <div className='w-full relative min-h-screen'>
-        <div className='flex flex-col px-20 py-10 gap-5'>
-           <UserGroupIcon className='w-32 text-primary-500'/>
+        <div className='flex flex-col px-10 md:px-20 py-10 gap-5'>
+           <UserGroupIcon className='w-20 md:w-32 text-primary-500'/>
            <div className='flex flex-col gap-3'>
-           <h1 className='text-6xl font-semibold text-primary-500'>Our Staff</h1>
+           <h1 className='text-3xl md:text-6xl font-semibold text-primary-500'>Our Staff</h1>
            <hr className='border-2 border-primary-500 w-2/5'/>
            </div>
-           <div className='text-xl flex flex-col gap-3'>
+           <div className='text-xl flex flex-col gap-5 w-full md:w-4/5'>
                 <p>Our organization have well exper-
                     inced & disciplined staffs who have
                     the ability to accomplish the given
@@ -32,6 +34,17 @@ export default function Section5() {
                     exceptional results.</p>
            </div>
         </div>  
+        <div className='flex flex-col px-20 py-10 gap-5'>
+            <CogIcon className='w-32 text-primary-500'/>
+            <div className='flex flex-col gap-3'>
+                <h1 className='text-6xl font-semibold text-primary-500'>Our Role</h1>
+                <hr className='border-2 border-primary-500 w-2/5'/>
+            </div>
+                <h1 className='text-4xl '>We Create synergy with other organizations</h1>
+                <div>
+                    <img src={role} alt="" />
+                </div>
+        </div>
     </div>
   )
 }
