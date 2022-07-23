@@ -27,7 +27,7 @@ const mobileMenuItems = [
     }, 
     {
         name: 'Products',
-        to: '/products',
+        to: '/product',
         icon: ShoppingCartIcon,
     },
     {
@@ -70,7 +70,7 @@ export default function OwnHeader() {
             <div className='w-auto lg:flex-none px-5 py-2'>
             <Popover.Group as="nav" className="hidden md:flex items-end h-full space-x-5">
                 <ListItems link="/" name="Home" />
-                <ListItems link="/produt" name="Products" />
+                <ListItems link="/product" name="Products" />
                 <ListItems link="/blog" name="Blog"  />
                 <ListItems link="/about" name="About Us"  />
                 <ListItems link="/contact" name="Contact Us"  />
