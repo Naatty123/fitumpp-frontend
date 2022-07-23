@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 // Sections
 import Section1 from '../layouts/about/Section1'
 import Section2 from '../layouts/about/Section2'
