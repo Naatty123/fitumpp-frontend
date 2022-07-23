@@ -42,7 +42,7 @@ export default function Section5() {
             </div>
                 <h1 className='text-4xl '>We Create synergy with other organizations</h1>
                 <div>
-                    <img src={role} alt="" />
+                    <img src={role} alt="How We Create Things" />
                 </div>
         </div>
     </div>

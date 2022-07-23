@@ -1,11 +1,18 @@
 import React from 'react'
 
 
+// Sections
 import Section1 from '../layouts/about/Section1'
 import Section2 from '../layouts/about/Section2'
 import Section3 from '../layouts/about/Section3'
 import Section4 from '../layouts/about/Section4'
 import Section5 from '../layouts/about/Section5'
+import Section6 from '../layouts/about/Section6'
+import Section7 from '../layouts/about/Section7'
+import Section8 from '../layouts/about/Section8'
+import Section9 from '../layouts/about/Section9'
+import Section10 from '../layouts/about/Section10'
+
 
 export default function About() {
   return (
@@ -21,7 +28,15 @@ export default function About() {
       {/* Section Five */}
         <Section5/>
       {/* Section Six */}
-
+        <Section6/>
+      {/* Section Seven */}
+        <Section7/>
+      {/* Section Eight */}
+        <Section8/>
+      {/* Section Nine */}
+        <Section9/>
+      {/* Section Ten */}
+        <Section10/>
     </div>
   )
 }

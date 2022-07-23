@@ -16,7 +16,7 @@ export default function App() {
         <main className='min-h-screen pt-10 md:pt-20 '>
           <Routes>
             <Route path='/' element={ <Home/> }/>
-            <Route path='/about' element={ <About/>} />
+            <Route path='/about/*' element={ <About/>} />
             <Route path='/contact' element={ <Contact/>} />
             <Route path='/product' element={ <Products/>} />
             <Route path='/blog' element={ <Blog/>} />
