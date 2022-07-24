@@ -9,7 +9,10 @@ import '../../assets/styles/FourthContentStyle.css';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-// import "swiper/css/navigation";
+
+// Data
+import Services from '../../data/Services';
+
 
 function getWindowSize() {
     const {innerWidth, innerHeight} = window;
@@ -42,18 +45,7 @@ function checkWidth(){
             window.removeEventListener('resize', handleWindowResize);
           };
     },[]);
-    // console.log(workTiles);
-    // checkWidth();
-    // console.log(checkWidth())
-
-
-    const services =[
-                       {id: 1, title: "Offset Printing"},
-                       {id: 2, title: "Veichle Graphics"},   
-                       {id: 3, title: "Signage"},   
-                       {id: 4, title: "Full Branding"},   
-                       {id: 5, title: "Large Format Printing"},   
-    ];  
+  
   return (
     <div className='w-full relative min-h bg-gray-100 grid grid-cols-12 items-center'>
         <div>
@@ -75,7 +67,7 @@ function checkWidth(){
                 className="mySwiper"
                 >
                {
-                services.map((item)=>(
+                Services.map((item)=>(
                     <SwiperSlide
                     key={item.id}
                     >
