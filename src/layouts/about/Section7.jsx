@@ -1,15 +1,8 @@
 import React from 'react'
 
 import award from '../../assets/images/AboutPageIcons/award-symbol.png';
-
-    const count=[
-            {id:1, text: "Award-1"},
-            {id:2, text: "Award-2"},
-            {id:3, text: "Award-3"},
-            {id:4, text: "Award-4"},
-            {id:5, text: "Award-5"},
-            {id:6, text: "Award-6"},
-    ];
+import Awards from '../../data/Awards';
+   
 
 export default function Section7() {
   return (
@@ -25,7 +18,7 @@ export default function Section7() {
            </div>
            <div className='grid grid-col-1 md:grid-cols-3 gap-10'>
              {
-                count.map((item)=>(
+                Awards.map((item)=>(
                     <div
                     key={item.id}
                     className='w-full bg-gray-400 h-60 rounded-2xl shadow-md hover:shadow-2xl cursor-pointer flex justify-center items-center transition ease-in-out delay-50  hover:-translate-y-1 hover:scale-110  duration-300 '>

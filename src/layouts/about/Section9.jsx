@@ -4,18 +4,11 @@ import { useState } from 'react';
 // Images
 import machine from '../../assets/images/AboutPageIcons/machine.png';
 
+// Data
+import MachineNames from '../../data/MachineNames';
 export default function Section9() {
     const [active,setActive] = useState('mach-1');
-    const machineNames = [
-                {id: 1, name: "Heidelberg MO", link:'mach-1'},
-                {id: 2, name: "Polar Cutter", link:'mach-2'},
-                {id: 3, name: "Perfect Binder" , link:'mach-3'},
-                {id: 4, name: "Heidelberg Kord" ,link:'mach-4'},
-                {id: 5, name: "Digital Solvent Printer", link:'mach-5'},
-                {id: 6, name: "CNC", link:'mach-6'},
-                {id: 7, name: "Laser Cutter", link:'mach-7'},
-                {id: 8, name: "hp Digital Printer", link:'mach-8'}
-    ];
+    
     
 
   return (
@@ -32,7 +25,7 @@ export default function Section9() {
         </div>
         <div className=' relative boor w-full h-auto grid grid-col-1 md:grid-cols-3 gap-10 px-20 py-5'>
                 {
-                    machineNames.map((item) =>(
+                    MachineNames.map((item) =>(
                         <div 
                         key={item.id}
                         className=' object-fill bg-repeat h-80 w-full bg-gray-3 rounded-xl cursor-pointer hover:shadow-xl transition ease-in-out delay-50  hover:-translate-y-1 hover:scale-110  duration-300 '
