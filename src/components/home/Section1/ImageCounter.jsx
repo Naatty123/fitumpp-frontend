@@ -1,12 +1,15 @@
 import React from 'react'
 
+import Works from '../../../data/Works';
 export default function ImageCounter(props) {
   const work = props.work;
   let current = props.current;
   
   function checkCurrent(num1,num2){
     if(num1 == num2)
-      return 'sectionOneBoxOn';
+      {
+        return Works[num2-1]['cname'];
+      }
     else 
       return 'sectionOneBoxOff';
   }

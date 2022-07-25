@@ -17,9 +17,13 @@
     "nano": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-fade-in": "^2.0.1",
     "react-flexible-sliding-menu": "^0.1.9",
     "react-google-maps": "^9.4.5",
+    "react-image-fade-in": "^1.1.3",
+    "react-lazyload": "^3.2.0",
     "react-router-dom": "^6.3.0",
+    "react-transition-group": "^4.4.2",
     "swiper": "^8.3.1"
   },
   "devDependencies": {

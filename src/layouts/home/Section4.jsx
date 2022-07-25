@@ -47,12 +47,16 @@ function checkWidth(){
     },[]);
   
   return (
-    <div className='w-full relative min-h bg-gray-100 grid grid-cols-12 items-center'>
-        <div>
+    <div className='w-full relative min-h bg-gray-200 flex-col px-5 py-5 sm:grid grid-cols-12 items-center'>
+        <div className='sm:hidden flex flex-row  justify-between'>
+            <ArrowNarrowLeftIcon className='w-10'/>
+            <ArrowNarrowRightIcon className='w-10'/>
+        </div>
+        <div className='hidden sm:inline'>
             <ArrowNarrowLeftIcon 
             className='hover:text-primary-500 cursor-pointer'/>
         </div>
-        <div className='col-span-10 boor px-5 py-5'>
+        <div className='col-span-10   py-5'>
             <Swiper
                 navigation={false}
                 slidesPerView={workTiles}
@@ -73,13 +77,14 @@ function checkWidth(){
                     >
                         <WorksBox 
                         key={item.id}
+                        icon={item.icon}
                         title={item.title}/>
                     </SwiperSlide>
                 ))
                }
             </Swiper>
         </div>
-        <div>
+        <div className='hidden sm:inline'>
             <ArrowNarrowRightIcon
             className='hover:text-primary-500 cursor-pointer'/>
         </div>

@@ -14,13 +14,13 @@ import Section9 from '../layouts/home/Section9';
 export default function Home() {
   
   return (
-  <div className='bg-gray-50 flex flex-col'>
+  <div className='bg-white flex flex-col'>
     {/* Section One */}
       <Section1/>
-    {/* Section Two */}
-      <Section2/>
     {/* Section Three */}
       <Section3/>
+    {/* Section Two */}
+       <Section2/>
     {/* Section Four */}
       <Section4/>
     {/* Section Five */}

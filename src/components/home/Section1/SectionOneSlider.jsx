@@ -21,9 +21,9 @@ export default function SectionOneSlider(props) {
     <Swiper 
       pagination={true} 
       modules={[Autoplay]} 
-      autoplay={{
-        delay:2500
-      }}
+      // autoplay={{
+      //   delay:500
+      // }}
       onSlideChange={()=> {
         if(count == Works.length)
           count=1
@@ -31,7 +31,7 @@ export default function SectionOneSlider(props) {
           count++
         props.countt(count)    
       }}
-      className="mySwiper h-screen">
+      className="mySwiper h-auto">
       {
         Works.map((item) =>(
         <SwiperSlide

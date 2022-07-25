@@ -46,7 +46,8 @@ module.exports = {
     'Segoe UI Emoji', 
     'Segoe UI Symbol', 
     'Noto Color Emoji'
-  ]
+  ],
+  'Sora' : ['Sora', 'sans-serif'],
     },
   },
   plugins: [

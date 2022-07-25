@@ -51,7 +51,7 @@ const mobileMenuItems = [
 export default function OwnHeader() {
   return (
     // Whole Menu
-   <Popover className="fixed w-full shadow-xl bg-primary-500 border border-gray-300 z-40">
+   <Popover className="fixed w-full shadow-xl bg-primary-500 border border-gray-300 z-40 font-Sora">
     <div className='max-w-7xl mx-auto px-4 sm:px-6'>
         <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x'>
             {/* Fitsum Advert Logo */}
