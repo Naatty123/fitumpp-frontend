@@ -21,32 +21,32 @@ export default function SectionSeven() {
     <div className='w-full relative h-auto  bg-[#E4F8F2] flex flex-col items-center py-5'>
       <div className='flex flex-col gap-5'>
         <h1 className='text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
-        <hr className='border-2 border-primary-500 bg-primary-500 w-1/4 m-auto rounded-full'/>
+        <hr className='border-2 border-primary-500 bg-primary-500 w-1/4 m-auto rounded-full' />
       </div>
       {/* Company List */}
-      <div className='w-full h-auto  grid grid-cols-1 md:grid-cols-7 gap-10'>
+      <div className='w-96 lg:w-full h-auto  grid grid-cols-1 lg:grid-cols-7 gap-10'>
         <CompanyCardHolder />
-        <div className='w-full h-full  flex flex-col md:py-56'>
-        <CompanyCards image={logo8}/>
+        <div className='w-full h-full hidden lg:flex flex-col md:py-56'>
+          <CompanyCards image={logo8} />
         </div>
-        <div className='w-full h-full  flex flex-col gap-12 md:py-36'>
-           <CompanyCards image={logo4}/>
-           <CompanyCards image={logo5}/>
-        </div>
-
-        <div className='w-full h-full  flex flex-col gap-12 md:py-12'>
-           <CompanyCards image={logo1}/>
-           <CompanyCards image={logo2}/>
-           <CompanyCards image={logo3}/>
-        </div>
-        
-        <div className='w-full h-full  flex flex-col gap-12 md:py-36'>
-           <CompanyCards image={logo6}/>
-           <CompanyCards image={logo7}/>
+        <div className='w-full h-full  flex flex-col gap-12 lg:py-36'>
+          <CompanyCards image={logo4} />
+          <CompanyCards image={logo5} />
         </div>
 
-        <div className='w-full h-full  flex flex-col md:py-56'>
-           <CompanyCards image={logo10}/>
+        <div className='w-full h-full  flex flex-col gap-12 lg:py-12'>
+          <CompanyCards image={logo1} />
+          <CompanyCards image={logo2} />
+          <CompanyCards image={logo3} />
+        </div>
+
+        <div className='w-full h-full  flex flex-col gap-12 lg:py-36'>
+          <CompanyCards image={logo6} />
+          <CompanyCards image={logo7} />
+        </div>
+
+        <div className='w-full h-full hidden lg:flex flex-col md:py-56'>
+          <CompanyCards image={logo10} />
         </div>
         <CompanyCardHolder />
       </div>

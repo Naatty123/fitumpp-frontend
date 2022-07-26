@@ -26,7 +26,7 @@ export default function Home() {
     {/* Section Five */}
       <Section5/>
     {/* Section Six */}
-      <Section6/>
+      {/* <Section6/> */}
     {/* Section Seven */}
       <Section7/>
     {/* Section Eight */}

@@ -47,7 +47,7 @@ function checkWidth(){
     },[]);
   
   return (
-    <div className='w-full relative min-h bg-gray-200 flex-col px-5 py-5 sm:grid grid-cols-12 items-center'>
+    <div className='w-full relative bg-gray-200 flex-col px-5 py-5 sm:grid grid-cols-12 items-center'>
         <div className='sm:hidden flex flex-row  justify-between'>
             <ArrowNarrowLeftIcon className='w-10'/>
             <ArrowNarrowRightIcon className='w-10'/>
