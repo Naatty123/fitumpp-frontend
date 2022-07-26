@@ -58,16 +58,18 @@ export default function SectionSeven() {
           <CompanyCards image={logo5} />
         </div>
       
-        <div className='w-[80vw] m-auto'>
-          <CompanyCards image={logo1} />
-        </div>
-        
-        <div className='w-full m-auto'>
-          <CompanyCards image={logo2} />
-        </div>
+        <div className='w-full my-1'>
+          <div className='w-[75vw] m-auto'>
+            <CompanyCards image={logo1} />
+          </div>
+          
+          <div className='w-full m-auto my-2'>
+            <CompanyCards image={logo2} />
+          </div>
 
-        <div className='w-[80vw] m-auto'>
-          <CompanyCards image={logo3} />
+          <div className='w-[75vw] m-auto'>
+            <CompanyCards image={logo3} />
+          </div>
         </div>
 
         <div className='w-[60vw] m-auto'>
