@@ -21,9 +21,9 @@ export default function SectionOneSlider(props) {
     <Swiper 
       pagination={true} 
       modules={[Autoplay]} 
-      // autoplay={{
-      //   delay:500
-      // }}
+      autoplay={{
+        delay:2500
+      }}
       onSlideChange={()=> {
         if(count == Works.length)
           count=1

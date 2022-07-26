@@ -18,13 +18,13 @@ import logo12 from '../../assets/images/Compnays/12.jpg'
 
 export default function SectionSeven() {
   return (
-    <div className='w-full relative h-auto  bg-[#E4F8F2] flex flex-col items-center py-5'>
-      <div className='flex flex-col gap-5'>
-        <h1 className='text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
+    <div className='w-full relative h-auto  bg-[#E4F8F2] flex flex-col items-center gap-5 py-5'>
+      <div className='flex flex-col gap-2 lg:gap-5'>
+        <h1 className='text-3xl lg:text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
         <hr className='border-2 border-primary-500 bg-primary-500 w-1/4 m-auto rounded-full' />
       </div>
-      {/* Company List */}
-      <div className='w-96 lg:w-full h-auto  grid grid-cols-1 lg:grid-cols-7 gap-10'>
+      {/* Company List For PC*/}
+      <div className='hidden w-96 lg:w-full h-auto  lg:grid grid-cols-1 lg:grid-cols-7 gap-10'>
         <CompanyCardHolder />
         <div className='w-full h-full hidden lg:flex flex-col md:py-56'>
           <CompanyCards image={logo8} />
@@ -50,6 +50,32 @@ export default function SectionSeven() {
         </div>
         <CompanyCardHolder />
       </div>
+
+      {/* Company List for Phone */}
+      <div className='lg:hidden w-full px-5 lg:w-full h-auto flex flex-col items-center gap-2'>
+      
+        <div className='w-[60vw] m-auto'>
+          <CompanyCards image={logo5} />
+        </div>
+      
+        <div className='w-[80vw] m-auto'>
+          <CompanyCards image={logo1} />
+        </div>
+        
+        <div className='w-full m-auto'>
+          <CompanyCards image={logo2} />
+        </div>
+
+        <div className='w-[80vw] m-auto'>
+          <CompanyCards image={logo3} />
+        </div>
+
+        <div className='w-[60vw] m-auto'>
+          <CompanyCards image={logo4} />
+        </div>
+
+      </div>
+    
     </div>
   )
 }

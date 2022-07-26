@@ -57,7 +57,6 @@ export default function Section10() {
                             <p>Saturday: 2am - 6am</p>
                         </div>
                     </div>
-
                 </div>
         </div>
     )
