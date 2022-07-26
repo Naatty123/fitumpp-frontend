@@ -8,7 +8,7 @@ import location from '../../assets/images/About Us/Icons/1location.png'
 export default function Section9() {
     return (
         <section className="text-gray-600 body-font relative">
-            <div className='min-h-screen px-5 md:px-5 lg:px-20 py-10 flex flex-col gap-10'>
+            <div className='min-h-screen px-5 md:px-5 lg:px-20 py-5 lg:py-10 flex flex-col gap-10'>
             <div className='flex flex-col gap-5'>
                 {/* <LocationMarkerIcon className='w-32 text-primary-500'/> */}
                 <img 
@@ -36,7 +36,7 @@ export default function Section9() {
                             <PhoneIcon className='w-10 text-primary-500'/>
                             <h1 className='text-3xl text-primary-500'>Contact</h1>
                         </div>
-                        <button className='bg-primary-500 px-16 py-3 text-white w-auto'>Call Now</button>
+                        <button className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</button>
                         <div className='flex flex-col gap-1'>
                             <p>+251 911 753 962</p> 
                             <p>+251 902 276 627</p>
@@ -49,7 +49,7 @@ export default function Section9() {
                             <LocationMarkerIcon className='w-10 text-primary-500'/>
                             <h1 className='text-3xl text-primary-500'>Address</h1>
                         </div>
-                        <button className='bg-primary-500 px-12 md:px-14 lg:px-14  py-3 text-white w-auto'>Get Directions</button>
+                        <button className='bg-primary-500 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</button>
                         <div>
                             <p>Shola</p>
                             <p>NULL Building</p>
@@ -63,7 +63,7 @@ export default function Section9() {
                             <ClockIcon className='w-10 text-primary-500'/>
                             <h1 className='text-3xl text-primary-500'>Office Hours</h1>
                         </div>
-                        <button className='bg-primary-500 px-16 py-3 text-white w-auto'>View Office</button>
+                        <button className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</button>
                         <div>
                             <p>Monday - Friday: 2am - 12pm</p>
                             <p>Saturday: 2am - 6am</p>
