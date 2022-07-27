@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../randstyle.css'
+import '../../assets/styles/FadeIn.css'
 
 export default function FadeIn() {
   return (

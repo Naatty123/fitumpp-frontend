@@ -15,9 +15,9 @@ import Section10 from '../layouts/about/Section10'
 
 export default function About() {
   return (
-    <div className='relative min-h-screen flex flex-col py-5'>
+    <div className='relative min-h-screen flex flex-col py-'>
       {/* Section One */}
-      {/* <Section1/> */}
+       <Section1/>
       {/* Section Two */}
         <Section2/>
       {/* Section Three */}
