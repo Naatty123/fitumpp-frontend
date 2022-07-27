@@ -51,9 +51,6 @@ export default function Section8() {
                             </div>
                         </div>
                 </div>
-
-
-
             </div>
         </section>
     )

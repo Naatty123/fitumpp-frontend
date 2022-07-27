@@ -35,7 +35,7 @@ export default function About() {
       {/* Section Nine */}
         <Section9/>
       {/* Section Ten */}
-        <Section10/>
+        {/* <Section10/> */}
     </div>
   )
 }

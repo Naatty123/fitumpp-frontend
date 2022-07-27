@@ -3,6 +3,7 @@ import { ArrowRightIcon } from '@heroicons/react/outline';
 
 // Image
 import image from '../../assets/images/Horizontal Image/Horizontal Image.png'
+import { Link } from 'react-router-dom';
 
 export default function SectionFive() {
   return (
@@ -16,9 +17,11 @@ export default function SectionFive() {
           <img src={image} alt="Works Image" />
         </div>  
         {/* Text Box */}
-        <div className='absolute -mt-52  md:mx-20 w-[80%] mx-5 md:w-[30%] h-52 px-10 py-5 space-y-5 bg-gray-50 shadow-xl'>
-        <h1 className='text-4xl '>See The Works Done</h1>
-        <p className='flex items-center text-xl gap-5'>View Gallery <ArrowRightIcon className="w-5"/></p>
+        <div className='absolute -mt-52  md:mx-20 w-[80%] mx-5 md:w-[30%] h-52 px-10 py-5 space-y-5 bg-gray-50 shadow-xl '>
+          <h1 className='text-4xl '>See The Works Done</h1>
+          <Link
+            to={"/gallery"}
+           className='flex items-center text-xl gap-5  hover:text-primary-500'>View Gallery <ArrowRightIcon className="w-5"/></Link>
         </div>
   </div>
   )

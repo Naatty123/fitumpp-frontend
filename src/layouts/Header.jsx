@@ -11,7 +11,8 @@ import {
     NewspaperIcon,
     UserGroupIcon,
     IdentificationIcon,
-    XIcon
+    XIcon,
+    PhotographIcon
 } from '@heroicons/react/outline'
 import Home from '../pages/Home'
 import ListItems from '../components/ListItems'
@@ -26,9 +27,9 @@ const mobileMenuItems = [
         icon: HomeIcon,
     }, 
     {
-        name: 'Products',
-        to: '/product',
-        icon: ShoppingCartIcon,
+        name: 'Gallery',
+        to: '/gallery',
+        icon: PhotographIcon,
     },
     {
         name: 'Blog',
@@ -70,7 +71,8 @@ export default function OwnHeader() {
             <div className='w-auto lg:flex-none px-5 py-2'>
             <Popover.Group as="nav" className="hidden md:flex items-end h-full space-x-5">
                 <ListItems link="/" name="Home" />
-                <ListItems link="/product" name="Products" />
+                {/* <ListItems link="/product" name="Products" /> */}
+                <ListItems link="/gallery" name="Gallery"/>
                 <ListItems link="/blog" name="Blog"  />
                 <ListItems link="/about" name="About Us"  />
                 <ListItems link="/contact" name="Contact Us"  />

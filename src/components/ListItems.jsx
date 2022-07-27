@@ -1,4 +1,4 @@
-import { HomeIcon, IdentificationIcon, NewspaperIcon, ShoppingCartIcon, UserGroupIcon } from '@heroicons/react/outline'
+import { HomeIcon, IdentificationIcon, NewspaperIcon, PhotographIcon, ShoppingCartIcon, UserGroupIcon } from '@heroicons/react/outline'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 // import 
@@ -10,6 +10,9 @@ function checkIcon(name){
       break;
       case "Products":
         return (<ShoppingCartIcon className={checkWidth}/>)
+        break;
+      case "Gallery":
+        return (<PhotographIcon className={checkWidth}/>)
         break;
       case "Blog":
         return (<NewspaperIcon className={checkWidth}/>)
