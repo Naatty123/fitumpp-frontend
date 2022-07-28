@@ -2,8 +2,8 @@ import React from 'react'
 import { Fragment } from 'react'
 import { Popover,Transition } from '@headlessui/react'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/images/logo/Fitsum letter F only logo.png'
-import clogo from '../assets/images/logo/F Only Colored Logo.png'
+import clogo from '../assets/images/logo/Fitsum letter F only logo.png'
+import logo from '../assets/images/logo/F Only Colored Logo.png'
 import { 
     MenuIcon,
     HomeIcon,
@@ -14,6 +14,7 @@ import {
     XIcon,
     PhotographIcon
 } from '@heroicons/react/outline'
+
 import Home from '../pages/Home'
 import ListItems from '../components/ListItems'
 
@@ -52,9 +53,10 @@ const mobileMenuItems = [
 export default function OwnHeader() {
   return (
     // Whole Menu
-   <Popover className="fixed w-full shadow-xl bg-primary-500 border border-gray-300 z-40 font-Sora">
+    
+   <Popover className="fixed w-full shadow-lg bg-white border border-gray-300 z-40 font-Sora">
     <div className='max-w-7xl mx-auto px-4 sm:px-6'>
-        <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x'>
+        <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x-2'>
             {/* Fitsum Advert Logo */}
             <div className='flex  justify-start  lg:w-auto lg:flex-none'>
                 <Link to="/">
@@ -62,21 +64,21 @@ export default function OwnHeader() {
                     <img 
                     src={logo} 
                     alt="Fitsum Advert Logo" 
-                    className='h-10 w-auto sm:h-[70px]'
+                    className='h-12 w-auto sm:h-[80px]'
                     />
                 </Link>
             </div>
            
             {/* Webview Headers */}
-            <div className='w-auto lg:flex-none px-5 py-2'>
-            <Popover.Group as="nav" className="hidden md:flex items-end h-full space-x-5">
-                <ListItems link="/" name="Home" />
-                {/* <ListItems link="/product" name="Products" /> */}
-                <ListItems link="/gallery" name="Gallery"/>
-                <ListItems link="/blog" name="Blog"  />
-                <ListItems link="/about" name="About Us"  />
-                <ListItems link="/contact" name="Contact Us"  />
-            </Popover.Group>
+            <div className='w-auto lg:flex-none px-5 py-2  relative'>
+                <Popover.Group as="nav" className="hidden md:flex items-end h-full space-x-5">
+                    <ListItems link="/" name="Home" />
+                    {/* <ListItems link="/product" name="Products" /> */}
+                    <ListItems link="/gallery" name="Gallery"/>
+                    <ListItems link="/blog" name="Blog"  />
+                    <ListItems link="/about" name="About Us"  />
+                    <ListItems link="/contact" name="Contact Us"  />
+                </Popover.Group>
             </div>
 
              {/* Hambug Menu For Phone */}
@@ -106,7 +108,7 @@ export default function OwnHeader() {
                         {/* Fitsum Advert Logo */}
                         <div>
                             <img 
-                            src={clogo} 
+                            src={logo} 
                             alt="Fitsum Advert Logo" 
                             className='h-12 w-auto sm:h-16 '
                             />

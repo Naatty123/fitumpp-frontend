@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useEffect } from 'react'
+
 
 // Sections
 import Section1 from '../layouts/home/Section1';
@@ -12,9 +14,14 @@ import Section8 from '../layouts/home/Section8';
 import Section9 from '../layouts/home/Section9';
 
 export default function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   
   return (
-  <div className='bg-white flex flex-col'>
+  <div className='bg-gray-50 flex flex-col'>
     {/* Section One */}
       <Section1/>
     {/* Section Three */}

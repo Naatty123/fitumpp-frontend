@@ -35,8 +35,8 @@ export default function ListItems(props) {
       className={({ isActive }) =>
                     isActive ? "activeHeaderLink" : "headerLinks"
                 }>
-      <div className='flex justify-end gap-1 items-end'>
-          {checkIcon(pageName)}
+      <div className='flex justify-end gap-1 items-end '>
+          {/* {checkIcon(pageName)} */}
           <span>{props.name}</span>
       </div>
       </NavLink>

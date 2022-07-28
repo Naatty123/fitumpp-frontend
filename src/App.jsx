@@ -9,11 +9,13 @@ import Product from './pages/Product'
 import Blog from './pages/Blog'
 import Testi from './pages/Testi'
 import Gallery from './pages/Gallery'
+import HeaderTest from './tests/HeaderTest'
 
 export default function App() {
   return (
     <Router>
     <Header/>
+    {/* <HeaderTest/> */}
         <main className='min-h-screen pt-10 md:pt-20 '>
           <Routes>
             <Route path='/' element={ <Home/> }/>
