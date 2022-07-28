@@ -1,4 +1,7 @@
 import React from 'react'
+import { useState } from 'react';
+import { useSpring, animated } from 'react-spring' 
+
 import {
     FcCalendar,
     FcWorkflow,
@@ -6,9 +9,47 @@ import {
     FcComboChart
 } from "react-icons/fc";
 
+
 // Images
 import logo from '../../assets/images/logo/Fitsum Colred Logo_Own Color.png'
+
+
 export default function Section8() {
+    function Text() {
+        const [flip, set] = useState(false)
+        const props = useSpring({
+          to: { opacity: 1 },
+          from: { opacity: 0 },
+          reset: true,
+          reverse: flip,
+          delay: 200,
+          config: config.molasses,
+          onRest: () => set(!flip),
+        })
+      
+        return <animated.h1 style={props}>hello</animated.h1>
+      }
+      function Number(){
+        const [flip, set] = useState(false)
+        const { number } = useSpring({
+          reset: true,
+          reverse: flip,
+          from: { number: 0 },
+          number: 10,
+          delay: 200,
+        //   config: config.molasses,
+          onRest: () => set(!flip),
+        })
+     
+        return <animated.div>{number.to(n => n.toFixed(2))}</animated.div>
+    }
+
+    function App() {
+        const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
+        return <animated.div style={props}>I will fade in</animated.div>
+      }
+    // const AnimatedDonut = animated(Donut)
+    
     return (
         <section className="text-gray-600 body-font">
             <div className="container grid sm:grid-cols-2  py-5 mx-auto">
@@ -22,8 +63,8 @@ export default function Section8() {
                     <div className="p-4 w-full">
                         <div className="border-2 border-gray-200 flex flex-col items-center px-4 py-6 rounded-lg shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-gray-50 duration-150 ">
                             <FcCalendar className='w-20 h-20' />
-                            <h2 className="title-font font-medium text-3xl text-gray-900">10+</h2>
-                            <p className="leading-relaxed">Years Worked</p>
+                            <h2 className="title-font font-medium text-3xl text-gray-900">{Number()}</h2>
+                            <p className="leading-relaxed">Years Workeds</p>
                         </div>
                     </div>
 

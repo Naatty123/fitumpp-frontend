@@ -1,7 +1,7 @@
 import React from 'react'
 import { Fragment } from 'react'
 import { Popover,Transition } from '@headlessui/react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink,useNavigate } from 'react-router-dom'
 import clogo from '../assets/images/logo/Fitsum letter F only logo.png'
 import logo from '../assets/images/logo/F Only Colored Logo.png'
 import { 
@@ -53,7 +53,12 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
   }
 
-export default function OwnHeader() {
+export default function Header() {
+    let Navigate = useNavigate();
+    const changePage = () => {
+        let path = '/order'
+        Navigate(path);
+    }
 
   const scrollPosition = useScrollPosition();
   console.log(scrollPosition)
@@ -90,7 +95,7 @@ export default function OwnHeader() {
 
              {/* Hambug Menu For Phone */}
              <div className='-mr-2 -my-2 md:hidden'>
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-primary-500 border-primary-500  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                     <span className='sr-only'>Open Menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true"/>
                 </Popover.Button>
@@ -122,7 +127,7 @@ export default function OwnHeader() {
                         </div>
                         {/* Close Button */}
                         <div className='-mr-2'>
-                            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-primary-500 hover:text-gray-500 border-primary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                                 <span className='sr-only'>Close Menu</span>
                                 <XIcon className='h-6' aria-hidden />
                             </Popover.Button>
@@ -147,14 +152,9 @@ export default function OwnHeader() {
                 </div>
                 {/* Under mobileMenuItems */}
                 <div className='py-6 px-5 space-y-6'>
-                    <div className='grid grid-cols-2 gap-y-4 gap-x-8'>
-                        <span className='text-base font-medium text-gray-900 hover:text-gray-700'>Item 1</span>
-                        <span className='text-base font-medium text-gray-900 hover:text-gray-700'>Item 2</span>
-                        <span className='text-base font-medium text-gray-900 hover:text-gray-700'>Item 3</span>
-                        <span className='text-base font-medium text-gray-900 hover:text-gray-700'>Item 4</span>
-                    </div>
+                   
                     <div>
-                        <button className='w-full px-5 py-4 bg-gray-400 rounded-lg shadow-lg'>Signup</button>
+                        <button onClick={changePage} className='w-full px-5 py-4 bg-primary-500 text-white rounded-lg shadow-lg'>Order Now</button>
                     </div>
                 </div>
             </div>

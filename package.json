@@ -36,6 +36,7 @@
     "react-image-overlay-effect": "^1.0.0",
     "react-lazyload": "^3.2.0",
     "react-router-dom": "^6.3.0",
+    "react-spring": "^9.5.2",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.5",
     "swiper": "^8.3.1"
