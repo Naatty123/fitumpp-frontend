@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 
 // Sections
 import Section1 from '../layouts/about/Section1'
@@ -15,6 +16,10 @@ import Section10 from '../layouts/about/Section10'
 
 export default function About() {
   
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
  
 
   return (

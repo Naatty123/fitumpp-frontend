@@ -1,7 +1,7 @@
 import React from 'react'
 import FadeIn from '../../components/home/FadeIn'
 import Fadeintest from '../../tests/Fadeintest'
-import  {useNavigate } from 'react-router-dom'
+import  { useNavigate } from 'react-router-dom'
 
 
 export default function SectionTwo() {

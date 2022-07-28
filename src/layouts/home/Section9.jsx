@@ -25,9 +25,9 @@ export default function Section9() {
                 style={{
                     border: 0, 
                 }}
-                allowfullscreen="" 
+                allowFullScreen="" 
                 loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20'>
                     {/* Contact Section */}

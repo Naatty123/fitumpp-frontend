@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../assets/images/logo/Fitsum letter F only logo.png'
 import SocialIcons from '../components/SocialIcons';
 import clogo from '../assets/images/logo/F Only Colored Logo.png'
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Fbuttons =[
   {
@@ -24,7 +26,17 @@ const Fbuttons =[
     ]
   }
 ]
+  const checkPage = () => {
+    console.log('cliced');
+  }
 export default function Footer() {
+  let navigate = useNavigate();
+
+  const changePage = () =>{
+    
+  }
+
+
   let tdate = new Date().getFullYear();
 
   return (
@@ -53,7 +65,9 @@ export default function Footer() {
             {item.links.map((sitem) =>(
                 <li
                 key={sitem}>
-                <a className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">{sitem}</a>
+                <Link 
+                to={checkPage}
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">{sitem}</Link>
               </li> 
             ))}
            

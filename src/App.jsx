@@ -10,19 +10,20 @@ import Blog from './pages/Blog'
 import Testi from './pages/Testi'
 import Gallery from './pages/Gallery'
 import HeaderTest from './tests/HeaderTest'
+import Order from './pages/Order'
 
 export default function App() {
   return (
     <Router>
     <Header/>
-    {/* <HeaderTest/> */}
-        <main className='min-h-screen pt-10 md:pt-20 '>
+        <main className='min-h-screen'>
           <Routes>
             <Route path='/' element={ <Home/> }/>
             <Route path='/about/*' element={ <About/>} />
             <Route path='/contact' element={ <Contact/>} />
             <Route path='/product' element={ <Product/>} />
             <Route path='/gallery' element={ <Gallery/>}/>
+            <Route path='/order' element={<Order/>} />
             <Route path='/blog' element={ <Blog/>} />
             <Route path='/testi' element={ <Testi/>} />
           </Routes>

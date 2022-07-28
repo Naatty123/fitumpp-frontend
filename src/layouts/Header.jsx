@@ -14,13 +14,13 @@ import {
     XIcon,
     PhotographIcon
 } from '@heroicons/react/outline'
+import useScrollPosition from '../hooks/useScrollPosition';
+
 
 import Home from '../pages/Home'
 import ListItems from '../components/ListItems'
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+
 const mobileMenuItems = [
     {
         name: 'Home',
@@ -49,12 +49,19 @@ const mobileMenuItems = [
     }
 ]
 
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ');
+  }
 
 export default function OwnHeader() {
+
+  const scrollPosition = useScrollPosition();
+  console.log(scrollPosition)
+
   return (
     // Whole Menu
     
-   <Popover className="fixed w-full shadow-lg bg-white border border-gray-300 z-40 font-Sora">
+   <Popover className={classNames(scrollPosition > 0 ? 'shadow-lg bg-white' : 'shadow-none', 'transition sticky top-0 w-full z-40 font-Sora backdrop-filter backdrop-blur-lg bg-opacity-30')}>
     <div className='max-w-7xl mx-auto px-4 sm:px-6'>
         <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x-2'>
             {/* Fitsum Advert Logo */}
