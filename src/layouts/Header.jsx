@@ -54,6 +54,26 @@ function classNames(...classes) {
   }
 
 export default function Header() {
+
+    const check = () =>{
+        let menu=document.getElementById('menu');
+        let trans = document.getElementById('headlessui-popover-panel-:r3:')
+        // trans.show(false)
+        console.log()
+        // trans.classList.add('hidden')
+        trans.show(false)
+    }
+    const appearMenu = () =>{
+
+        let trans =  document.getElementById('headlessui-popover-panel-:r3:')
+        if(trans){
+            console.log('true')
+            // trans.classList.remove('hidden');
+            trans.className.replace('hidden','block');
+        }
+    }
+
+
     let Navigate = useNavigate();
     const changePage = () => {
         let path = '/order'
@@ -95,7 +115,7 @@ export default function Header() {
 
              {/* Hambug Menu For Phone */}
              <div className='-mr-2 -my-2 md:hidden'>
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-primary-500 border-primary-500  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                <Popover.Button onClick={appearMenu} className="bg-white rounded-md p-2 inline-flex items-center justify-center text-primary-500 border-primary-500  hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                     <span className='sr-only'>Open Menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true"/>
                 </Popover.Button>
@@ -104,6 +124,7 @@ export default function Header() {
     </div>
     {/* Mobile Context Menu */}
     <Transition
+        id='transition'
         as={Fragment}
         enter="duration-200 ease-out"
         enterFrom="opacity-0 scale-95"
@@ -113,7 +134,8 @@ export default function Header() {
         leaveTo="opacity-0 scale-95"
       >
         {/* Mobile Pop Up Menu */}
-        <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        {/* {console.log(<Popover.Panel/>)} */}
+        <Popover.Panel focus id='menu' className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className='rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 bg-gray-50 divide-y-2 divide-gray-50 '>
                 <div className='pt-5 pb-6 px-5'>
                     <div className='flex items-center justify-between'>
@@ -138,6 +160,7 @@ export default function Header() {
                             {/* Listing mobileMenuItems using map inside the Popover Panel */}
                             {mobileMenuItems.map((item) => (
                                 <Link
+                                    onClick={check}
                                     key={item.name}
                                     to={item.to}
                                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 border-b border-gray-50"

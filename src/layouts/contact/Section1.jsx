@@ -3,6 +3,7 @@ import React from 'react'
 
 // Image
 import img1 from '../../assets/images/Contact/Contact Us Random.webp'
+import Modal from '../../components/contact/Modal'
 
 export default function Section1() {
   return (
@@ -19,7 +20,7 @@ export default function Section1() {
                     alt="Contact Us" />
             </div>
         </div>
-        <div className='absolute top-80 h-auto w-full z-20 flex flex-col md:flex-row justify-evenly gap-5 md:gap-0 px-5'>
+        <div className='absolute top-80 h-auto w-full z-10 flex flex-col md:flex-row justify-evenly gap-5 md:gap-0 px-5'>
             {/* Box One Call Us */}
             <div className='relative w-full md:w-1/3 h-auto flex flex-col gap-5 items-center px-10 py-10 bg-gray-50 shadow-2xl border border-gray-200'>
                 <div className='w-full flex flex-col gap-1 items-center text-gray-600'>
@@ -45,7 +46,7 @@ export default function Section1() {
                     <p className='text-gray-600'>Send us an E-email, with your name, phone (Optional) and message explaining what you want in detail </p>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <button className='bg-primary-500 px-5 py-3 text-white shadow-lg hover:shadow-xl'>Send Message</button>
+                   <Modal/>
                 </div>
             </div>
 
